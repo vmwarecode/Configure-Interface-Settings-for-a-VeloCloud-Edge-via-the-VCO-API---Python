@@ -56,6 +56,7 @@ def main():
     routedInterfaces = edgeSpecificProfileDeviceSettingsData['routedInterfaces']
     for iface in routedInterfaces:
         if iface['name'] == 'INTERNET2':
+            iface['override'] = True
             iface['addressing'] = { 'cidrIp': '20.0.0.0',
                                     'cidrPrefix': 24,
                                     'gateway': '20.0.0.1',
